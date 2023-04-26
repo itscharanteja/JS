@@ -22,3 +22,8 @@ let text = "<h1>Winter is coming</h1>";
 let myRegex1 = /<.*?>/; // Change this line
 let result4 = text.match(myRegex1);
 console.log(result4)
+
+let username = "JackOfAllTrades";
+let userCheck = /\w/gi; // Change this line
+let result5 = userCheck.test(username);
+console.log(result5)
