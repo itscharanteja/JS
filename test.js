@@ -250,14 +250,48 @@
 // let a = chunkArrayInGroups(["a", "b", "c", "d"], 2);
 // console.log(a);
 
-function Dog(name) {
+// function Dog(name) {
+//   this.name = name;
+// }
+
+// Dog.prototype = {
+//   // Only change code below this line
+//   numLegs: 4,
+//   eat: function () {
+//     console.log("bark bark bark");
+//   },
+//   describe: function () {
+//     console.log("My name is " + this.name);
+//   },
+// };
+
+// var batsy = new Dog("batsy");
+// console.log(Object.prototype.isPrototypeOf(Dog.prototype));
+
+function Cat(name) {
   this.name = name;
 }
 
-Dog.prototype.numLegs = 4;
+Cat.prototype = {
+  constructor: Cat,
+};
 
-let beagle = new Dog("Snoopy");
+function Bear(name) {
+  this.name = name;
+}
 
-console.log(Dog.numLegs) //output is undefined
-console.log(beagle.numLegs) //output is 4
-console.log(beagle.constructor == Dog) //output is 4
+Bear.prototype = {
+  constructor: Bear,
+};
+
+function Animal() {}
+
+Animal.prototype = {
+  constructor: Bear,
+  eat: function () {
+    console.log("nom nom nom");
+  },
+};
+
+let a = new Bear("Bear");
+
