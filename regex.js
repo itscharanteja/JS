@@ -1,4 +1,4 @@
 let myString = "freeCodeCamp";
-let fccRegex = /freeCodeCamp/i; // Change this line
-let result = fccRegex.test(myString);
-console.log(result)
+let fccRegex = /^[a-z]*/g; // Change this line
+let result = myString.match(fccRegex);
+console.log(result);
